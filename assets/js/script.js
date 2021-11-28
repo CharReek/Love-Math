@@ -1,3 +1,21 @@
+// wait for the page to finish loading before running the game
+// get the button element and add event listner
+
+document.addEventListener("DOMContentLoaded", function(){
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons){
+        button.addEventListener("click", function(){
+            if (this.getAttribute("data-type") === "submit"){
+                alert("You clicked Sumbit!");
+            } else{
+                let gameType = this.getAttribute("data-type");
+                alert(`You clicked ${gameType}`);
+            }
+        })
+    }
+})
+
 function runGame(){
 
 }
